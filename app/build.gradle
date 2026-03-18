@@ -34,4 +34,9 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // yt-dlp Engine & Coroutines
+    implementation 'com.github.yausername.youtubedl-android:library:0.16.2'
+    implementation 'com.github.yausername.youtubedl-android:ffmpeg:0.16.2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 }
