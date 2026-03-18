@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#1976D2"
+            android:padding="16dp">
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Youtube Pro"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/btnDownloads"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="Downloads"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/homeSection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center_vertical">
+            <EditText
+                android:id="@+id/etLink"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Paste YouTube Link Here..."
+                android:background="#E3F2FD"
+                android:padding="10dp"
+                android:textColor="#000000"/>
+            <Button
+                android:id="@+id/btnFind"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:text="Find Qualities"
+                android:backgroundTint="#1976D2"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/downloadsSection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:visibility="gone"
+            android:padding="16dp">
+            <LinearLayout
+                android:id="@+id/downloadsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E3F2FD"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Quality and Audio"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView android:text="Video Quality" android:textStyle="bold" android:textColor="#000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp"/>
+        <RadioGroup android:id="@+id/rgVideo" android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <TextView android:text="Dubbed Audio Language" android:textStyle="bold" android:textColor="#000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp"/>
+        <RadioGroup android:id="@+id/rgAudio" android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnDownloadStart"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:text="Download Now"
+            android:backgroundTint="#1976D2"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
